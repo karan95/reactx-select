@@ -1,11 +1,11 @@
-## Reactx-Select
+## Reactx2-Select
 
 The Select control for React.
 
 Features include:
 
-Flexible approach to data, with customisable functions
-Extensible styling API
+Flexible approach to data, with customisable functions  
+Extensible styling API  
 
 ### Installation and usage
 
@@ -45,8 +45,8 @@ class App extends React.Component {
 ```
 
 ## Props
-`defaultValue`: set the initial value of the control
-`options`: options the user can select from
+`defaultValue`: set the initial value of the control  
+`options`: options the user can select from  
 
 ## Controllable Props
-`optionChanged`: callback when option is changed
+`optionChanged`: callback function when an option is changed
