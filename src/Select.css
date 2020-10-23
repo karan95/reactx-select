@@ -1,0 +1,100 @@
+.x-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+.x-select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-width: 0 1px 0 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #B0B0B0;
+}
+.x-select__trigger {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 300;
+    color: darkslategrey;
+    height: 50px;
+    line-height: 50px;
+    background: #ffffff;
+    cursor: pointer;
+    border-width: 1px 0 1px 0;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #B0B0B0;
+}
+.x-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #B0B0B0;
+    border-radius: 5px;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.x-select.open .x-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.x-option {
+    position: relative;
+    display: block;
+    padding: 0 20px 0 18px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    color: darkslategrey;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.x-option:hover {
+    cursor: pointer;
+    background-color: #D3D3D3;
+}
+.x-option.selected {
+    color: #ffffff;
+    background-color: #305c91;
+    border-radius: 5px;
+}
+
+.select-content {
+    width: 80%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.select-content-btn {
+    width: 10%;
+}
+
+.btn {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #B0B0B0;
+}
+
+.btn:hover {
+    color: darkslategrey;
+}
+
+.btn:focus {
+    outline: none;
+}

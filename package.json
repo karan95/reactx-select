@@ -1,18 +1,19 @@
 {
-  "name": "reactx-select",
-  "version": "0.1.0",
-  "private": true,
+  "name": "reactx2-select",
+  "version": "1.2.1",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "font-awesome": "^4.7.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-scripts": "3.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "./node_modules/.bin/babel src/Select.js --out-file index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,5 +31,30 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "keywords": [
+    "combobox",
+    "form",
+    "input",
+    "react",
+    "react-component",
+    "select"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/karan95/reactx-select.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^8.1.0"
   }
 }

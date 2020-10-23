@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import Select from './Select';
 import './App.css';
 
 function App() {
+  // select options data format
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+    { value: 'pineapple', label: 'Pineapple' },
+    { value: 'orange', label: 'Orange' }
+  ];
+
+  // "build": "./node_modules/.bin/babel src/Select.js --out-file index.js",
+
+  // optional callback function to be passed in
+  function optionChanged(option) {
+    console.log(option);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3 className="App-header">Custom react-select component</h3>
+      <div className="demo-select">
+        <Select defaultValue={options[0]} options={options} optionChanged={optionChanged}/>
+      </div>
     </div>
   );
 }
